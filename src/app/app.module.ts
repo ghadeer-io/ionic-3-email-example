@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {EmailComposer} from "@ionic-native/email-composer";
+import {EmailService} from "../services/EmailService";
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    EmailComposer,
+    EmailService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
